@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Valeriya Zaytseva](https://up.htmlacademy.ru/htmlcss/30/user/917085).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
