@@ -52,16 +52,16 @@
             <legend>Сетка:</legend>
             <ul>
               <li>
-                <input type="radio" name="grid" value="shaving" id="filter-shave">
-                <label for="filter-shave">Адаптивная</label>
+                <input type="radio" name="grid" value="adaptive" id="filter-adaptive">
+                <label for="filter-adaptive">Адаптивная</label>
               </li>
               <li>
-                <input type="radio" name="grid" value="hair-care" id="filter-care" checked>
-                <label for="filter-care">Фиксированная</label>
+                <input type="radio" name="grid" value="fixed" id="filter-fixed" checked>
+                <label for="filter-fixed">Фиксированная</label>
               </li>
               <li>
-                <input type="radio" name="grid" value="accessories" id="filter-accessories">
-                <label for="filter-accessories">Резиновая</label>
+                <input type="radio" name="grid" value="elastic" id="filter-elastic">
+                <label for="filter-elastic">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -69,23 +69,23 @@
             <legend>Особенности:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="slider" id="slider" checked>
+                <input type="checkbox" name="slider" value="slider" id="slider" checked>
                 <label for="slider">Слайдер</label>
               </li>
               <li>
-                <input type="checkbox" name="advantages" id="advantages">
+                <input type="checkbox" name="advantages" value="advantages" id="advantages">
                 <label for="advantages">Блок преимуществ</label>
               </li>
               <li>
-                <input type="checkbox" name="news" id="news" checked>
+                <input type="checkbox" name="news" value="news" id="news" checked>
                 <label for="news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" name="gallery" id="gallery">
+                <input type="checkbox" name="gallery" value="gallery" id="gallery">
                 <label for="gallery">Галерея</label>
               </li>
               <li>
-                <input type="checkbox" name="shopping-cart" id="shopping-cart">
+                <input type="checkbox" name="shopping-cart" value="shopping-cart" id="shopping-cart">
                 <label for="shopping-cart">Корзина</label>
               </li>
             </ul>
@@ -93,7 +93,7 @@
           <button type="submit">Показать</button>
         </form>
       </section>    
-      <section class="catalog_filter">
+      <section class="catalog-filter">
         <h2>Сортировать:</h2>
         <ul>
           <li>
@@ -115,7 +115,7 @@
           </li>
         </ul>
       </section>
-      <section class="catalog_list">
+      <section class="catalog-list">
         <h2 class="visually-hidden">Каталог</h2>
         <ul>
           <li>
