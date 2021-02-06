@@ -102,27 +102,28 @@
     </section>
     <section class="about">
       <h2 class="visually-hidden">О компании</h2>
-      <div class="about-info-1">
+      <div class="about-info">
         <p class="about-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p>Исповедуем принципы минимализма и чистоты.
           Ставим математический расчет превыше креатива.
           Работаем не покладая рук, как роботы.</p>
-        <p class="about-subtitle-1">Выполняем заказы на разработку:</p>
+        <p class="about-subtitle">Выполняем заказы на разработку:</p>
         <ul class="order-list">
           <li class="order-item">Веб-сайтов любой сложности</li>
           <li class="order-item">Мобильных приложений для iOS и Android</li>
           <li class="order-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
-      <div class="about-info-2">
-        <p class="about-subtitle-2">с 2004 года любим точность во всем:</p>
-        <table class="info-table">
-          <tr class="info-table-row-1">
-            <td>146<sup>%</sup></td>
-            <td>100<sup>%</sup></td>
-            <td>50<sup>%</sup></td>
+      <div class="about-stat">
+        <img src="img/nerds-illustration.png" width="360" height="525" alt="Цветной логотип Nёrds">
+        <p class="about-subtitle">с 2004 года любим точность во всем:</p>
+        <table class="stat-table">
+          <tr>
+            <th>146<sup>%</sup></th>
+            <th>100<sup>%</sup></th>
+            <th>50<sup>%</sup></th>
           </tr>
-          <tr class="info-table-row-2">
+          <tr>
             <td>Уровень самоотдачи</td>
             <td>Соблюдение сроков</td>
             <td>Минимальная предоплата</td>
@@ -160,7 +161,7 @@
     <section class="footer-information">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="footer-map">
-        <div class="footer-map-marker"></div>
+        <!-- <div class="footer-map-marker"></div> -->
       </div>
       <div class="footer-contacts">
         <p class="contacts-title">Nёrds design studio</p>
@@ -211,15 +212,15 @@
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="contact-form-name">Ваше имя:</label><br>
-        <input type="text" name="contact-form-name" id="contact-form-name" placeholder="Имя Фамилия">
+        <input class="modal-form-element" type="text" name="contact-form-name" id="contact-form-name" placeholder="Имя Фамилия">
       </p>
       <p>
         <label for="contact-form-email">Ваш email:</label><br>
-        <input type="email" name="contact-form-email" id="contact-form-email" placeholder="email@example.com">
+        <input class="modal-form-element" type="email" name="contact-form-email" id="contact-form-email" placeholder="email@example.com">
       </p>
       <p>
         <label for="contact-form-message">Текст письма:</label><br>
-        <textarea name="contact-form-message" id="contact-form-message" rows="5"
+        <textarea class="modal-form-element" name="contact-form-message" id="contact-form-message" rows="5"
           placeholder="В свободной форме"></textarea>
       </p>
       <button class="button" type="submit">Отправить</button>
