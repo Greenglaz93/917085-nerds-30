@@ -422,7 +422,7 @@ img {
 .modal-form input:focus,
 .modal-form textarea:focus {
   outline: none;
-  color: rgb(var(--color-black));
+  color: var(--gray-68);
   border-color: rgb(var(--color-black));
 }
 
