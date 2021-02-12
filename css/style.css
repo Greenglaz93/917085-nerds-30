@@ -32,8 +32,13 @@
 
 /* Global */
 
+.page {
+  height: 100%;
+}
+
 .page-body {
   min-width: 1160px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -43,6 +48,12 @@
   text-transform: none;
   color: var(--color-neutral);
   background-color: rgb(var(--color-white));
+  display: grid;
+  grid-template-rows:
+    min-content
+    1fr
+    min-content;
+  align-content: start;
 }
 
 a {
@@ -83,7 +94,6 @@ a:not(.button):visited {
   border: none;
   border-radius: 3px;
   width: 140px;
-  margin: 10px;
   outline-color: transparent;
 }
 
@@ -113,19 +123,63 @@ a:not(.button):visited {
   background-color: var(--gray-213);
 }
 
+/*Header*/
+
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  outline: 7px solid rgba(102, 82, 212, 0.7);
+  outline-offset: -5px;
+}
+
+.main-header {
+  background-color: var(--gray-238);
+  outline: 5px solid rgba(47, 224, 127, 0.5);
+  outline-offset: -5px;
+  margin-bottom: 0;
+}
+
 /* Main navigation */
 
 .main-navigation {
+  display: grid;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
   color: rgb(var(--color-black));
-  background-color: var(--gray-238);
+  padding: 0;
+  margin-top: 49px;
+  min-height: 65px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr min-content;
 }
 
 .site-navigation,
 .user-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.site-navigation {
+  outline: 5px solid rgba(87, 0, 33, 0.5);
+  outline-offset: -5px;
+  justify-self: center;
+}
+
+.user-navigation {
+  outline: 5px solid rgba(87, 0, 33, 0.5);
+  outline-offset: -5px;
+  justify-self: end;
+}
+
+.main-header-logo {
+  justify-self: start;
+  outline: 5px solid rgba(87, 0, 33, 0.5);
+  outline-offset: -5px;
 }
 
 .main-header-logo:hover {
@@ -134,6 +188,10 @@ a:not(.button):visited {
 
 .main-header-logo:active {
   opacity: 0.3;
+}
+
+.cart-link {
+  position: relative;
 }
 
 .site-navigation a:hover,
@@ -149,9 +207,9 @@ a:not(.button):visited {
 
 .cart-link::before {
   content: "";
-  position: absolute; /*пока примерное положение*/
-  left: 15px;
-  top: 232px;
+  position: absolute;
+  top: 2px;
+  left: -20px;
   width: 15px;
   height: 15px;
   background-image: url("../img/cart-icon.svg");
@@ -165,13 +223,27 @@ a:not(.button):visited {
 
 /* Slider */
 
+.container {
+  outline: 5px solid rgba(243, 117, 14, 0.7);
+  outline-offset: -5px;
+}
+
+.slider {
+  background-color: var(--gray-238);
+  outline: 5px solid rgba(9, 0, 63, 0.3);
+  outline-offset: -5px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
 .slider-list,
 .slider-buttons {
   list-style: none;
-  background-color: var(--gray-238);
+  padding: 0;
 }
 
 .slider-item {
+  height: 431px;
   background-position: right, center;
   background-repeat: no-repeat;
 }
@@ -206,6 +278,15 @@ a:not(.button):visited {
   background-image: url(../img/nerds-index-slide3.png);
 }
 
+.slider-buttons {
+  position: absolute;
+  bottom: 80px;
+  left: 250px;
+  right: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .slider-button {
   width: 18px;
   height: 18px;
@@ -220,6 +301,12 @@ a:not(.button):visited {
 
 .services-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
 }
 
 .service-title {
@@ -261,6 +348,12 @@ a:not(.button):visited {
 }
 
 /* About */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-row: 150px;
+}
 
 .about-title {
   color: rgb(var(--color-black));
@@ -320,6 +413,8 @@ a:not(.button):visited {
 
 .partners-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .partners-list a {
@@ -481,7 +576,7 @@ a:not(.button):visited {
   color: var(--gray-102);
 }
 
-a.catalog-item-title:hover {
+.catalog-item-title:hover {
   color: var(--color-alpha);
 }
 
@@ -510,14 +605,44 @@ a.catalog-item-title:focus {
 
 /* Footer-information */
 
-.footer-map {
-  width: 1440px;
-  height: 416px;
-  background-image: url("../img/map.png");
-  background-color: transparent;
-  background-repeat: no-repeat;
+ .main-footer {
+  outline: 5px solid rgba(255, 0, 0, 0.5);
+  outline-offset: -5px;
 }
 
+.footer-map {
+  width: 100%;
+  height: 418px;
+  background-color: rgb(var(--color-white));
+  background-image: url("../img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 110px;
+}
+
+.footer-wrapper {
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
+  height: 416px;
+  outline: 5px solid rgba(0, 226, 19, 0.8);
+  outline-offset: -5px;
+}
+
+.footer-contacts-card {
+  box-sizing: border-box;
+  position: absolute;
+  margin: 54px auto;
+  padding: 40px;
+  background-color: rgb(var(--color-white));
+  width: 319px;
+  height: 308px;
+}
 /*
 .footer-map-marker {
   width: 1440px;
@@ -529,10 +654,6 @@ a.catalog-item-title:focus {
 }
 */
 
-.footer-contacts {
-  background-color: rgb(var(--color-white));
-}
-
 .contacts-title {
   font-size: 18px;
   line-height: 30px;
@@ -541,7 +662,7 @@ a.catalog-item-title:focus {
   text-transform: uppercase;
 }
 
-.footer-contacts address,
+.footer-contacts-card address,
 .contacts-phone {
   line-height: 18px;
   color: var(--gray-102);
@@ -549,13 +670,27 @@ a.catalog-item-title:focus {
   text-align: left;
 }
 
+.contacts-button {
+  margin-top: 37px;
+}
+
 /* Footer-social */
+
+.footer-social {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 
 .social-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 81px;
   height: 81px;
   padding: 0;
@@ -596,6 +731,9 @@ a.catalog-item-title:focus {
 
 /* Modal */
 
+.modal {
+  display: none;
+}
 .modal-title {
   font-size: 45px;
   line-height: 52.73px;
@@ -642,4 +780,9 @@ a.catalog-item-title:focus {
 .modal-form input:focus::-webkit-input-placeholder,
 .modal-form textarea:focus::-webkit-input-placeholder {
   opacity: 1;
+}
+section,
+section.slider {
+  outline: 2px solid rgba(255, 0, 212, 1);
+  outline-offset: -5px;
 }
