@@ -17,23 +17,23 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation wrapper">
+    <div class="wrapper header">
       <a class="main-header-logo" href="">
         <img src="img/logo/logo-nerds.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс">
       </a>
-      <div class="navigation">
+      <nav class="main-navigation">
         <ul class="site-navigation">
           <li>
             <a href="">Студия</a>
           </li>
           <li>
-            <a href="">Клиенты</a>
+             <a href="">Клиенты</a>
           </li>
           <li>
             <a href="catalog.html">Магазин</a>
-          </li>
-          <li>
-            <a href="">Контакты</a>
+           </li>
+           <li>
+             <a href="">Контакты</a>
           </li>
         </ul>
         <ul class="user-navigation">
@@ -41,8 +41,8 @@
             <a class="cart-link" href="">Корзина</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
@@ -52,30 +52,30 @@
       <div class="wrapper">
         <ul class="slider-list">
           <li class="slider-item slide-1 slide-current">
-            <p class="slider-title">Долго, дорого, скрупулезно.</p>
-            <p class="slider-text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <a href="" class="button">Узнать больше</a>
+            <h3 class="slide-title">Долго, дорого, скрупулезно.</h3>
+            <p class="slide-text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+            <a href="" class="button slide-button">Узнать больше</a>
           </li>
           <!-- <li class="slider-item slide-2">
-            <p class="slider-title">Любим математику как никто другой</p>
-            <p class="slider-text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-            <a href="" class="button">Узнать больше</a>
+            <h3 class="slide-title">Любим математику как никто другой</h3>
+            <p class="slide-text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+            <a href="" class="button slide-button">Узнать больше</a>
           </li>
           <li class="slider-item slide-3">
-            <p class="slider-title">Только ночь, только хардкор</p>
-            <p class="slider-text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-            <a href="" class="button">Узнать больше</a>
-          </li>-->
+            <h3 class="slide-title">Только ночь, только хардкор</h3>
+            <p class="slide-text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <a href="" class="button slide-button">Узнать больше</a>
+          </li> -->
         </ul>
-        <ul class="slider-buttons">
+        <ul class="slider-controls">
           <li>
-            <button class="slider-button active" type="button"></button>
+            <button aria-label="Первый слайд" class="slider-button active" type="button"></button>
           </li>
           <li>
-            <button class="slider-button" type="button"></button>
+            <button aria-label="Второй слайд" class="slider-button" type="button"></button>
           </li>
           <li>
-            <button class="slider-button" type="button"></button>
+            <button aria-label="Третий слайд" class="slider-button" type="button"></button>
           </li>
         </ul>
       </div>
@@ -93,7 +93,7 @@
         <li class="services-item">
           <img src="img/content/illustration-2.png" width="300" height="146" alt="Два смартфона на зелёном фоне">
           <h3 class="service-title">Приложения</h3>
-          <p class="service-text">Покорите топ-10 приложений в AppStore и Google Play</p>
+          <p class="service-text">Покорите топ-10 приложений<br>в AppStore и Google Play</p>
           <a href="" class="button button-green">Заказать</a>
          </li>
          <li class="services-item">
@@ -109,11 +109,11 @@
       <h2 class="visually-hidden">О компании</h2>
       <div class="about-grid">
         <div class="about-info">
-          <p class="about-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+          <b class="about-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
           <p>Исповедуем принципы минимализма и чистоты.
             Ставим математический расчет превыше креатива.
             Работаем не покладая рук, как роботы.</p>
-          <p class="about-subtitle">Выполняем заказы на разработку:</p>
+          <h3 class="about-subtitle">Выполняем заказы на разработку:</h3>
           <ul class="order-list">
             <li class="order-item">Веб-сайтов любой сложности</li>
             <li class="order-item">Мобильных приложений для iOS и Android</li>
@@ -122,7 +122,7 @@
         </div>
         <div class="about-stat">
           <img src="img/nerds-illustration.png" width="360" height="525" alt="Цветной логотип Nёrds">
-          <p class="about-subtitle">с 2004 года любим точность во всем:</p>
+          <h3 class="about-subtitle">с 2004 года любим точность во всем:</h3>
           <table class="stat-table">
             <tr>
               <th>146<sup>%</sup></th>
@@ -141,28 +141,18 @@
     </section>
     <section class="partners wrapper">
       <h2 class="visually-hidden">Партнёры</h2>
-      <ul class="partners-list">
-        <li class="partners-item">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo/logo-htmlacademy.svg" width="200" height="68" alt="Логотип HTML Academy">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/logo/logo-barbershop.svg" width="209" height="90" alt="Логотип Barbershop Borodinski">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/logo/logo-pink.svg" width="185" height="52" alt="Логотип PINK">
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/logo/logo-mishka.svg" width="173" height="84" alt="Логотип Mishka">
-          </a>
-        </li>
-      </ul>
+      <a class="partners-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/logo/logo-htmlacademy.svg" width="200" height="68" alt="Логотип HTML Academy">
+      </a>
+      <a class="partners-borodinski"  href="">
+        <img src="img/logo/logo-barbershop.svg" width="209" height="90" alt="Логотип Barbershop Borodinski">
+      </a>
+      <a class="partners-pink"  href="">
+        <img src="img/logo/logo-pink.svg" width="185" height="52" alt="Логотип PINK">
+      </a>
+      <a class="partners-mishka"  href="">
+        <img src="img/logo/logo-mishka.svg" width="173" height="84" alt="Логотип Mishka">
+      </a>
     </section>
   </main>
   <footer class="main-footer">
@@ -213,28 +203,29 @@
       </div>
     </section>
   </footer>
-  <!-- <section class="modal">
-    <h2 class="visually-hidden">Обратная связь</h2>
-    <p class="modal-title">Напишите нам</p>
-    <button class="modal-close" type="button">Закрыть</button>
+  <section class="modal-feedback modal-show">
+    <h2>Напишите нам</h2>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="contact-form-name">Ваше имя:</label><br>
-        <input class="modal-form-element" type="text" name="contact-form-name" id="contact-form-name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="contact-form-email">Ваш email:</label><br>
-        <input class="modal-form-element" type="email" name="contact-form-email" id="contact-form-email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="contact-form-message">Текст письма:</label><br>
-        <textarea class="modal-form-element" name="contact-form-message" id="contact-form-message" rows="5"
-          placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button" type="submit">Отправить</button>
+      <div class="form-container">
+        <p>
+          <label for="contact-form-name">Ваше имя:</label><br>
+          <input class="modal-form-element" type="text" name="contact-form-name" id="contact-form-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="contact-form-email">Ваш email:</label><br>
+          <input class="modal-form-element" type="email" name="contact-form-email" id="contact-form-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="contact-form-message">Текст письма:</label><br>
+          <textarea class="modal-form-element" name="contact-form-message" id="contact-form-message" rows="5"
+            placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button-send" type="submit">Отправить</button>
+      </div>
     </form>
+  </section>
 
-  </section> -->
 </body>
 
 </html>
