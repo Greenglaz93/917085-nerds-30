@@ -1411,7 +1411,7 @@ a:not(.button):visited {
 }
 
 .catalog-item-title:hover,
-a.catalog-item-title:focus {
+.catalog-item-title:focus-within {
   color: var(--color-alpha);
 }
 
