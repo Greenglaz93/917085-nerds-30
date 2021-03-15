@@ -1394,6 +1394,11 @@ a:not(.button):visited {
 .button-price {
   width: 200px;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.button-price:active {
+  color: rgb(var(--color-white));
 }
 
 .catalog-item:hover::before,
