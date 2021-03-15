@@ -7,8 +7,8 @@
   <title>HTML Academy: Нёрдс - Каталог</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -17,11 +17,10 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="wrapper header">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo/logo-nerds.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс">
-      </a>
-      <nav class="main-navigation">
+      <nav class="main-navigation wrapper">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo/logo-nerds.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс">
+        </a>
         <ul class="site-navigation list-clean">
           <li>
             <a href="">Студия</a>
@@ -29,8 +28,8 @@
           <li>
              <a href="">Клиенты</a>
           </li>
-          <li>
-            <a class="current" href="catalog.html">Магазин</a>
+          <li class="site-navigation-current">
+            <a href="catalog.html">Магазин</a>
            </li>
            <li>
              <a href="">Контакты</a>
@@ -42,7 +41,6 @@
           </li>
         </ul>
       </nav>
-    </div>
   </header>
 
   <main class="page-catalog">
@@ -141,14 +139,14 @@
           <ul class="sorting-control-list list-clean">
             <li>
               <a class="sorting-control active" aria-label="Сортировка по убыванию" href="">
-                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" fill="#A6A6A6"/>
                 </svg>
               </a>
             </li>
             <li>
               <a class="sorting-control" aria-label="Сортировка по возрастанию" href="">
-                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/>
                 </svg>
               </a>
@@ -159,57 +157,69 @@
           <h2 class="visually-hidden">Каталог</h2>
           <ul class="catalog-list list-clean">
             <li class="catalog-item">
-              <img class="catalog-img" src="img/content/img-sedona.jpg" width="358" height="576" alt="Шаблон «Sedona»">
+              <a class="catalog-item-link" href="">
+                <img class="catalog-img" src="img/content/img-sedona.jpg" width="358" height="576" alt="Шаблон «Sedona»">
+              </a>
               <div class="catalog-list-info">
-                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта" href="">Sedona</a>
+                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта">Sedona</a>
                 <p>Информационный сайт<br>для туристов</p>
-                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽" href="">9 900 &#8381;</a>
+                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽">9 900 &#8381;</button>
               </div>
             </li>
             <li class="catalog-item">
-              <img class="catalog-img" src="img/content/img-pink.jpg" width="358" height="576" alt="Шаблон «Pink app»">
+              <a class="catalog-item-link" href="">
+                <img class="catalog-img" src="img/content/img-pink.jpg" width="358" height="576" alt="Шаблон «Pink app»">
+              </a>
               <div class="catalog-list-info">
-                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта" href="">Pink app</a>
+                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта">Pink app</a>
                 <p>Продуктовый лендинг приложения для iOS и Android</p>
-                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽" href="">9 900 &#8381;</a>
+                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽">9 900 &#8381;</button>
               </div>
             </li>
             <li class="catalog-item">
-              <img class="catalog-img" src="img/content/img-barbershop.jpg" width="358" height="576" alt="Шаблон «Barbershop»">
+              <a class="catalog-item-link" href="">
+                <img class="catalog-img" src="img/content/img-barbershop.jpg" width="358" height="576" alt="Шаблон «Barbershop»">
+              </a>
               <div class="catalog-list-info">
-                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта" href="">Barbershop</a>
+                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта">Barbershop</a>
                 <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽" href="">9 900 &#8381;</a>
+                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽">9 900 &#8381;</button>
               </div>
             </li>
             <li class="catalog-item">
-              <img class="catalog-img" src="img/content/img-mishka.jpg" width="358" height="576" alt="Шаблон «Mishka»">
+              <a class="catalog-item-link" href="">
+                <img class="catalog-img" src="img/content/img-mishka.jpg" width="358" height="576" alt="Шаблон «Mishka»">
+              </a>
               <div class="catalog-list-info">
-                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта" href="">Mishka</a>
+                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта">Mishka</a>
                 <p>Интернет-магазин<br>вязаных игрушек</p>
-                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽" href="">9 900 &#8381;</a>
+                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽">9 900 &#8381;</button>
               </div>
             </li>
             <li class="catalog-item">
-              <img class="catalog-img" src="img/content/img-aplus.jpg" width="358" height="576" alt="Шаблон «A Plus»">
+              <a class="catalog-item-link" href="">
+                <img class="catalog-img" src="img/content/img-aplus.jpg" width="358" height="576" alt="Шаблон «A Plus»">
+              </a>
               <div class="catalog-list-info">
-                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта" href="">A Plus</a>
+                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта">A Plus</a>
                 <p>Лендинг курсов повышения квалификации</p>
-                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽" href="">9 900 &#8381;</a>
+                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽">9 900 &#8381;</button>
               </div>
             </li>
             <li class="catalog-item">
-              <img class="catalog-img" src="img/content/img-kvast.jpg" width="358" height="576" alt="Шаблон «Кваст»">
+              <a class="catalog-item-link" href="">
+                <img class="catalog-img" src="img/content/img-kvast.jpg" width="358" height="576" alt="Шаблон «Кваст»">
+              </a>
               <div class="catalog-list-info">
-                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта" href="">Кваст</a>
+                <a class="catalog-item-title" aria-label="Открыть подробное описание готового шаблона сайта">Кваст</a>
                 <p>Промо-сайт производителя крафтового кваса</p>
-                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽" href="">9 900 &#8381;</a>
+                <button type="button" class="button button-price" aria-label="Купить готовый шаблон сайта за 9 900 ₽">9 900 &#8381;</button>
               </div>
             </li>
           </ul>
           <ul class="pagination-list list-clean">
             <li class="pagination-item pagination-item-current">
-              <a class="button button-control" href="">1</a>
+              <a class="button button-control">1</a>
             </li>
             <li class="pagination-item">
               <a class="button button-control" href="">2</a>
@@ -236,7 +246,7 @@
         <address>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8 <br><br>тел.
         <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
         </address>
-        <a href="" class="contacts-button button">Напишите нам</a>
+        <a href="feedback.html" class="contacts-button button">Напишите нам</a>
       </div>
     </section>
     <section class="footer-social wrapper">
@@ -289,13 +299,14 @@
         <p>
           <label for="contact-form-message">Текст письма:</label><br>
           <textarea class="modal-form-element feedback-message" name="contact-form-message" id="contact-form-message" rows="5"
-            placeholder="В свободной форме"></textarea>
+            placeholder="В свободной форме">
+          </textarea>
         </p>
         <button class="button button-send" type="submit">Отправить</button>
       </div>
     </form>
   </section>
-  <script src="js/feedback.js"></script>
+  <script src="js/feedback.min.js"></script>
 </body>
 
 </html>
